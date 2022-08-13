@@ -20,7 +20,7 @@ const large = () => css`
 	font-size: 1.5rem;
 `;
 const extraLarge = () => css`
-	font-size: 2rem;
+	font-size: 1.75rem;
 `;
 
 // weights

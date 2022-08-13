@@ -1,24 +1,23 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import { CustomButton, CustomInput, FlexDiv, Label } from "../components/index";
+import {
+	CustomButton,
+	CustomInput,
+	FlexDiv,
+	Label,
+	StyledP,
+} from "../components/index";
 import { colors, fonts } from "../themes";
 
 const Container = styled.div`
-	width: 28rem;
+	width: 28.9rem;
 	background-color: ${colors.secondary};
 	border-radius: 0.5rem;
 	border-width: 2px;
 	border-style: solid;
 	border-image: linear-gradient(to bottom right, #969696, #343434) 1;
 	padding: 2.5rem 1.5rem;
-`;
-const StyledP = styled.p`
-	text-align: center;
-	color: ${(props) => props.color};
-	${(props) => props.fontSize};
-	margin: ${(props) => props.margin};
-	${(props) => props.fontWeight};
 `;
 
 function LoginForm() {
@@ -32,6 +31,7 @@ function LoginForm() {
 				color={colors.darkGray}
 				fontWeight={fonts.weights.fontWeight(500)}
 				fontSize={fonts.size.small()}
+				textAlign="center"
 			>
 				WELCOME BACK
 			</StyledP>
@@ -40,6 +40,7 @@ function LoginForm() {
 				fontSize={fonts.size.xRegular()}
 				fontWeight={fonts.weights.fontWeight(600)}
 				margin="0.5rem 0 2.8rem 0"
+				textAlign="center"
 			>
 				Log into your account
 			</StyledP>
@@ -83,15 +84,15 @@ function LoginForm() {
 			>
 				Login now
 			</CustomButton>
-			<Label
+			<StyledP
 				color={colors.darkGray}
 				fontWeight={fonts.weights.fontWeight(400)}
 				fontSize={fonts.size.small()}
 				display="inline"
 			>
 				Not registered yet?
-			</Label>
-			<Label
+			</StyledP>
+			<StyledP
 				color={colors.lightGray}
 				fontWeight={fonts.weights.fontWeight(500)}
 				fontSize={fonts.size.small()}
@@ -99,7 +100,7 @@ function LoginForm() {
 				margin="0 0 0 0.2rem"
 			>
 				Register →
-			</Label>
+			</StyledP>
 		</Container>
 	);
 }

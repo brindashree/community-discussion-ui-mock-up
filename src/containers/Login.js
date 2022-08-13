@@ -6,9 +6,8 @@ import logo from "../images/logo.svg";
 import { colors } from "../themes";
 
 const Container = styled.div`
-	height: 100vh;
+	min-height: 100vh;
 	background-color: ${colors.primary};
-	color: white;
 	display: flex;
 	justify-content: center;
 	align-items: center;

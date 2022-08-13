@@ -6,5 +6,8 @@ const colors = {
 	lightGray: "#C5C7CA",
 	borderGray: "#35373B",
 	ctaBlue: "#4A96FF",
+	text: "#7F8084",
+	cardGray: "#27292d",
+	primaryBlack: "#191920",
 };
 module.exports = colors;
