@@ -13,8 +13,8 @@ const Container = styled.div`
 	align-items: center;
 `;
 const ImageContainer = styled.div`
-	width: 2rem;
-	height: 2rem;
+	width: 2.2rem;
+	height: 2.2rem;
 	margin-bottom: 3.3rem;
 	img {
 		width: 100%;

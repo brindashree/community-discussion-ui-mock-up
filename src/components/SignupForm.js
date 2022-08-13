@@ -14,10 +14,10 @@ import closeIcon from "../images/closeIcon.svg";
 const Container = styled.div`
 	width: 28.9rem;
 	background-color: ${colors.secondary};
-	border-radius: 0.5rem;
-	border-width: 2px;
-	border-style: solid;
-	border-image: linear-gradient(to bottom right, #969696, #343434) 1;
+	background: linear-gradient(#27292d 0 0) padding-box,
+		linear-gradient(to bottom right, #969696, #343434) border-box;
+	border-radius: 8px;
+	border: 2px solid transparent;
 	padding: 2.5rem 1.5rem;
 	position: relative;
 `;

@@ -58,10 +58,13 @@ export const CustomInput = styled.input`
 	background-color: ${colors.secondary};
 	color: ${colors.white};
 	padding: 0.75rem;
-	border: 1.5px solid ${colors.borderGray};
+	border: 2px solid ${colors.borderGray};
 	width: 100%;
 	border-radius: 4px;
 	margin: 0.625rem 0;
+	&::placeholder {
+		font-size: 1rem;
+	}
 `;
 
 export const CustomButton = styled.button`
