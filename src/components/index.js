@@ -74,6 +74,7 @@ export const CustomButton = styled.button`
 	border: none;
 	border-radius: 4px;
 	padding: 0.75rem 2.37rem;
+	cursor: pointer;
 `;
 export const ImageContainer = styled.div`
 	min-width: ${(props) => props.width};
@@ -82,5 +83,24 @@ export const ImageContainer = styled.div`
 	img {
 		width: 100%;
 		height: 100%;
+	}
+`;
+
+export const CloseButton = styled.button`
+	min-width: 2rem;
+	min-height: 2rem;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: right;
+	background-color: ${colors.primary};
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	cursor: pointer;
+	img {
+		width: 1rem;
+		height: 1rem;
 	}
 `;

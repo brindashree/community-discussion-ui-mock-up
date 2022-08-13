@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import {
 	Card,
@@ -11,6 +11,7 @@ import SinglePostCard from "../components/SinglePostCard";
 import messageIcon from "../images/messageIcon.svg";
 import { colors, fonts } from "../themes";
 import { posts } from "../api/data";
+import ModalPopup from "../components/Modal";
 
 const Container = styled.div`
 	min-height: 100vh;
@@ -35,6 +36,14 @@ const PostsSection = styled.section`
 	margin-top: 1rem;
 `;
 function Home() {
+	const [isModalVisible, setModalVisible] = useState(false);
+	const handlePostClick = () => {
+		setModalVisible(true);
+	};
+	const handleModalClose = () => {
+		setModalVisible(false);
+	};
+
 	return (
 		<Container>
 			<Content>
@@ -81,6 +90,7 @@ function Home() {
 						fontSize={fonts.size.regular()}
 						backgroundColor={colors.ctaBlue}
 						width="fit-content"
+						onClick={handlePostClick}
 					>
 						Post
 					</PostButton>
@@ -94,6 +104,10 @@ function Home() {
 					</PostsSection>
 				)}
 			</Content>
+			<ModalPopup
+				visible={isModalVisible}
+				handleModalClose={handleModalClose}
+			/>
 		</Container>
 	);
 }

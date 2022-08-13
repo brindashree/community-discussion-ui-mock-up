@@ -4,7 +4,6 @@ import styled from "styled-components";
 import {
 	CustomButton,
 	CustomInput,
-	FlexDiv,
 	Label,
 	StyledP,
 	CloseButton,
@@ -23,29 +22,28 @@ const Container = styled.div`
 	position: relative;
 `;
 
-function LoginForm({ handleModalToggle, modalVisible, handleClose }) {
+function SignUpForm({ handleModalToggle, modalVisible, handleClose }) {
 	const navigate = useNavigate();
-	const handleLogin = () => {
+	const handleContinue = () => {
 		if (modalVisible) {
 			handleClose();
 		} else {
 			navigate("/home");
 		}
 	};
+
 	return (
 		<Container>
-			{modalVisible && (
-				<CloseButton onClick={handleClose}>
-					<img src={closeIcon} alt="close-button" />
-				</CloseButton>
-			)}
+			<CloseButton onClick={handleClose}>
+				<img src={closeIcon} alt="close-button" />
+			</CloseButton>
 			<StyledP
 				color={colors.darkGray}
 				fontWeight={fonts.weights.fontWeight(500)}
 				fontSize={fonts.size.small()}
 				textAlign="center"
 			>
-				WELCOME BACK
+				SIGN UP
 			</StyledP>
 			<StyledP
 				color={colors.white}
@@ -54,7 +52,7 @@ function LoginForm({ handleModalToggle, modalVisible, handleClose }) {
 				margin="0.5rem 0 2.8rem 0"
 				textAlign="center"
 			>
-				Log into your account
+				Create an account to continue
 			</StyledP>
 
 			<Label
@@ -62,29 +60,27 @@ function LoginForm({ handleModalToggle, modalVisible, handleClose }) {
 				fontWeight={fonts.weights.fontWeight(500)}
 				fontSize={fonts.size.small()}
 			>
-				Email or Username
+				Email
 			</Label>
-			<CustomInput type="text" placeholder="Enter your email or username" />
-			<FlexDiv justifyContent="space-between">
-				<Label
-					color={colors.lightGray}
-					fontWeight={fonts.weights.fontWeight(500)}
-					fontSize={fonts.size.small()}
-					margin="0.4rem 0 0 0"
-					display="inline"
-				>
-					Password
-				</Label>
-				<Label
-					color={colors.lightGray}
-					fontWeight={fonts.weights.fontWeight(500)}
-					fontSize={fonts.size.xSmall()}
-					display="inline"
-					margin="0.4rem 0 0 0"
-				>
-					Forgot password?
-				</Label>
-			</FlexDiv>
+			<CustomInput type="text" placeholder="Enter your email" />
+			<Label
+				color={colors.lightGray}
+				fontWeight={fonts.weights.fontWeight(500)}
+				fontSize={fonts.size.small()}
+			>
+				Username
+			</Label>
+			<CustomInput type="text" placeholder="Choose a preferred username" />
+
+			<Label
+				color={colors.lightGray}
+				fontWeight={fonts.weights.fontWeight(500)}
+				fontSize={fonts.size.small()}
+				margin="0.4rem 0 0 0"
+				display="inline"
+			>
+				Password
+			</Label>
 			{/* TODO CHANGE PASSWORD INPUT WITH ICON*/}
 			<CustomInput type="password" placeholder="Enter your password" />
 			<CustomButton
@@ -92,9 +88,9 @@ function LoginForm({ handleModalToggle, modalVisible, handleClose }) {
 				backgroundColor={colors.ctaBlue}
 				fontWeight={fonts.weights.fontWeight(500)}
 				fontSize={fonts.size.regular()}
-				onClick={handleLogin}
+				onClick={handleContinue}
 			>
-				Login now
+				Continue
 			</CustomButton>
 			<StyledP
 				color={colors.darkGray}
@@ -102,7 +98,7 @@ function LoginForm({ handleModalToggle, modalVisible, handleClose }) {
 				fontSize={fonts.size.small()}
 				display="inline"
 			>
-				Not registered yet?
+				Already have an account?
 			</StyledP>
 			<StyledP
 				color={colors.lightGray}
@@ -112,10 +108,10 @@ function LoginForm({ handleModalToggle, modalVisible, handleClose }) {
 				margin="0 0 0 0.2rem"
 				onClick={() => handleModalToggle()}
 			>
-				Register →
+				Login →
 			</StyledP>
 		</Container>
 	);
 }
 
-export default LoginForm;
+export default SignUpForm;
