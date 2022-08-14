@@ -10,6 +10,7 @@ import {
 } from "../components/index";
 import { colors, fonts } from "../themes";
 import closeIcon from "../images/closeIcon.svg";
+import CustomPasswordInput from "./CustomPasswordInput";
 
 const Container = styled.div`
 	width: 28.9rem;
@@ -81,8 +82,7 @@ function SignUpForm({ handleModalToggle, modalVisible, handleClose }) {
 			>
 				Password
 			</Label>
-			{/* TODO CHANGE PASSWORD INPUT WITH ICON*/}
-			<CustomInput type="password" placeholder="Enter your password" />
+			<CustomPasswordInput placeholder="Choose a strong password" />
 			<CustomButton
 				color={colors.white}
 				backgroundColor={colors.ctaBlue}
@@ -107,6 +107,7 @@ function SignUpForm({ handleModalToggle, modalVisible, handleClose }) {
 				display="inline"
 				margin="0 0 0 0.2rem"
 				onClick={() => handleModalToggle()}
+				cursorPointer
 			>
 				Login →
 			</StyledP>

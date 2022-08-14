@@ -20,6 +20,7 @@ export const StyledP = styled.p`
 	text-align: ${(props) => props.textAlign};
 	color: ${(props) => props.color};
 	${(props) => props.fontSize};
+	${(props) => props.cursorPointer && `cursor: pointer;`};
 	margin: ${(props) => props.margin};
 	${(props) => props.fontWeight};
 	display: ${(props) => (props.display ? props.display : "block")};
@@ -64,6 +65,11 @@ export const CustomInput = styled.input`
 	margin: 0.625rem 0;
 	&::placeholder {
 		font-size: 1rem;
+	}
+	&:focus,
+	:focus-visible {
+		border: 2px solid ${colors.borderGray} !important;
+		outline: transparent;
 	}
 `;
 

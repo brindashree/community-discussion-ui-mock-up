@@ -11,6 +11,7 @@ import {
 } from "../components/index";
 import { colors, fonts } from "../themes";
 import closeIcon from "../images/closeIcon.svg";
+import CustomPasswordInput from "./CustomPasswordInput";
 
 const Container = styled.div`
 	width: 28.9rem;
@@ -85,8 +86,7 @@ function LoginForm({ handleModalToggle, modalVisible, handleClose }) {
 					Forgot password?
 				</Label>
 			</FlexDiv>
-			{/* TODO CHANGE PASSWORD INPUT WITH ICON*/}
-			<CustomInput type="password" placeholder="Enter your password" />
+			<CustomPasswordInput placeholder="Enter your password" />
 			<CustomButton
 				color={colors.white}
 				backgroundColor={colors.ctaBlue}
@@ -111,6 +111,7 @@ function LoginForm({ handleModalToggle, modalVisible, handleClose }) {
 				display="inline"
 				margin="0 0 0 0.2rem"
 				onClick={() => handleModalToggle()}
+				cursorPointer
 			>
 				Register →
 			</StyledP>
