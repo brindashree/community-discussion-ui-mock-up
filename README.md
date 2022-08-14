@@ -6,4 +6,4 @@
 - ReactJs
 - Styled Components
 
-## [Demo] (https://community-discussion-forum.netlify.app/)
+- Live Link - https://community-discussion-forum.netlify.app/
