@@ -2,8 +2,8 @@
 
 ## Tech Stack
 
-    - HTML,CSS
-    - ReactJs
-    - Styled Components
+- HTML,CSS
+- ReactJs
+- Styled Components
 
-## Demo [https://community-discussion-forum.netlify.app/]
+## [Demo] (https://community-discussion-forum.netlify.app/)
